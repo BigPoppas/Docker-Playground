@@ -10,6 +10,7 @@ COPY . /app
 
 EXPOSE 80
 
-VOLUME ["/app/feedback"]
+# To create anonymous volumes, however in our case we need with a volume with name because we need persistence!!
+# VOLUME ["/app/feedback"]
 
 CMD ["node", "server.js"]
