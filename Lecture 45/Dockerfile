@@ -1,16 +1,15 @@
-FROM node
+FROM node:14
 
 WORKDIR /app
 
-COPY package.json /app
+COPY package.json .
 
 RUN npm install
 
-COPY . /app
+COPY . .
 
 EXPOSE 80
 
-# To create anonymous volumes, however in our case we need with a volume with name because we need persistence!!
-# VOLUME ["/app/feedback"]
+# VOLUME [ "/app/node_modules" ]
 
-CMD ["node", "server.js"]
+CMD [ "npm", "start" ]
