@@ -7,7 +7,10 @@ services:
   ######################################
 
   server:
-    image: "nginx:alpine-slim"
+    # image: "nginx:alpine-slim"
+    build:
+      context: .
+      dockerfile: dockerfiles/nginx.dockerfile
     ports:
       - "8000:80"
     volumes:
