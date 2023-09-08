@@ -1,3 +1,6 @@
 Slides/
 npm_modules/
 src/
+
+*.pem
+*.ppk
